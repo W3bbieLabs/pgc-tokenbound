@@ -1,15 +1,17 @@
 import { createWallet, inAppWallet } from "thirdweb/wallets";
 import { createThirdwebClient } from "thirdweb";
+import { clientId } from "../const/constant";
 
 const wallets = [
   inAppWallet(),
   createWallet("io.metamask"),
-  createWallet("com.coinbase.wallet"),
+  createWallet("com.coinbase.wallet", {
+    walletConfig: {
+      options: "smartWalletOnly",
+    },
+  }),
   createWallet("me.rainbow"),
 ];
-
-const clientId = process.env.NEXT_PUBLIC_CLIENT_ID || "";
-const secretKey = process.env.NEXT_PUBLIC_SECRET_KEY || "";
 
 const client = createThirdwebClient({ clientId });
 

@@ -116,9 +116,9 @@ export default function MobileNavigation() {
               as="div"
               className="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-background-light dark:bg-background-dark p-4 text-lg tracking-tight text-foreground-light dark:text-foreground-dark shadow-xl ring-1 ring-slate-900/5"
             >
+              {/* <MobileNavLink href="/">Placeholder</MobileNavLink>
               <MobileNavLink href="/">Placeholder</MobileNavLink>
-              <MobileNavLink href="/">Placeholder</MobileNavLink>
-              <MobileNavLink href="/">Placeholder</MobileNavLink>
+              <MobileNavLink href="/">Placeholder</MobileNavLink> */}
               <ConnectButton
                 wallets={wallets}
                 client={client}

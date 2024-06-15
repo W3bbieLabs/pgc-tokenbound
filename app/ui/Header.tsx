@@ -43,11 +43,7 @@ export function Header() {
             <Link href="/">
               <div className="flex items-center">
                 <Image
-                  src={
-                    theme === "dark"
-                      ? `/pgc-logo-dark.png`
-                      : `/pgc-logo-light2.png`
-                  }
+                  src={"/pgc-logo-dark.png"}
                   alt="public goods logo image"
                   width={50}
                   height={50}
@@ -56,9 +52,9 @@ export function Header() {
             </Link>
           </div>
           <div className="hidden md:flex md:gap-x-6 ">
+            {/* <NavLink href="/">Placeholder</NavLink>
             <NavLink href="/">Placeholder</NavLink>
-            <NavLink href="/">Placeholder</NavLink>
-            <NavLink href="/">Placeholder</NavLink>
+            <NavLink href="/">Placeholder</NavLink> */}
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
             <div className="hidden md:block">
