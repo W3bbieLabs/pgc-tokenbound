@@ -3,6 +3,7 @@ import type { NFT as NFTType } from "thirdweb";
 import Link from "next/link";
 import React from "react";
 import NFTComponent from "./NFT";
+import { nftDropAddress } from "../const/constant";
 
 type Props = {
   isLoading: boolean;
@@ -26,7 +27,7 @@ export default function NFTGrid({
   return (
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 p-4">
       {nfts.map((nft) => (
-        <Link key={nft.tokenURI} href={nft.tokenURI}>
+        <Link key={nft.tokenURI} href={`/token/${nftDropAddress}/${nft.metadata.id}`}>
           <NFTComponent nft={nft} />
         </Link>
       ))}
